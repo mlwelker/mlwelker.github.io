@@ -1,5 +1,5 @@
 let cameras = [];
-let camId = 1;
+let camId = 0;
 let currentStream = null;
 
 document.addEventListener('readystatechange', (event) => {
@@ -40,7 +40,7 @@ document.addEventListener('readystatechange', (event) => {
 		  }
 		}
 
-		video.addEventListener('dblclick',event => {
+		video.addEventListener('click',event => {
 			if(location.href.includes('&debug')) {
 				console.log('clicked on video');
 				console.log(cameras);
